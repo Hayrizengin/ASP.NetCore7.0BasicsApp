@@ -1,0 +1,8 @@
+@model List<Course>
+
+@foreach(var kurs in Model){   <!--Burada foreach yardımı ile döngü oluşturduk model listemiz-->
+    @if(kurs.isActive){
+        @await Html.PartialAsync("_Course", kurs)   <!-- Yanına kurs yazmamızın sebebi döngü için-->
+    }
+    
+}
